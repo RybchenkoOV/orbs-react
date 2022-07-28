@@ -7,10 +7,12 @@ import Chat from './components/Navbar/Chat/Chat';
 import About from './components/Navbar/About/About';
 import Posts from './components/Navbar/Posts/Posts';
 import { Route, Routes } from 'react-router-dom';
+import { addPost } from './redux/state';
 
 
 const App = (props) => {
-  return (
+
+    return (
     <div className="appWrapper">
       <div className='appWrapperHeader'>
         <Header />
@@ -19,7 +21,7 @@ const App = (props) => {
         <Navbar />
       </div>
       <div className="appWrapperContent">
-        <Posts appStatus={props.app} />
+        <Posts appState={props.appState} addPost={props.addPost}/>
         {/* <Routes>
           <Route path="profile" element={<Profile />} />
           <Route path="chat" element={<Chat />} />

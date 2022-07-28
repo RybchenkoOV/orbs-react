@@ -9,13 +9,13 @@ let state = {
 }
 
 export let addPost = (postMessage) => {
-    let postId = state.profilePage.posts.id
+    let postId = state.posts.id
     let newPost = {
-        id: postId,
+        id: postId+1,
         message: postMessage,
         likesCount: 10
     }
-    state.profilePage.posts.push(newPost)
+    state.posts.push(newPost)
 }
 
 export default state;

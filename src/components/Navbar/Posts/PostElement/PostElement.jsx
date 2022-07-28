@@ -6,7 +6,7 @@ const PostElement = (props) => {
     return (
         <div>
             <span className={s.span}>
-                Post
+                {props.id}+{props.message}+{props.likesCount}
             </span>
         </div>
     )
