@@ -1,0 +1,24 @@
+.appWrapper {
+  display: grid;
+  grid-template-areas: 
+  "h h"
+  "n c";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+}
+
+.appWrapperContent {
+  grid-area: c;
+  background-color: bisque;
+}
+
+.appWrapperHeader {
+  grid-area: h;
+  background-color: grey;
+}
+
+.appWrapperNavbar {
+  grid-area: n;
+  background-color: azure;
+}
